@@ -1,4 +1,4 @@
-package spring.boot.practice;
+package spring.boot.practice.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
