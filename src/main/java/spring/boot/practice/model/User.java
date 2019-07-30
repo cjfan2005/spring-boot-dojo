@@ -4,6 +4,11 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.validation.constraints.Email;
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.Size;
+
+
 
 @Entity
 public class User {
@@ -11,7 +16,13 @@ public class User {
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
 	private Integer id;
+	
+	@NotBlank(message = "Name is mandatory") // must be not null and their trimmed length must be greater than zero
+//	@Size(min = 5, max = 25)
 	private String name;
+	
+	@NotBlank(message = "Name is mandatory")
+	@Email
 	private String email;
 	
 	
