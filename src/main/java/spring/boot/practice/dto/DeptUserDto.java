@@ -8,6 +8,13 @@ public class DeptUserDto {
 	private String email;
 	private String deptName;
 	
+	public DeptUserDto(long userId, long deptId, String name, String email, String deptName) {
+		this.userId = userId;
+		this.deptId = deptId;
+		this.name = name;
+		this.email = email;
+		this.deptName = deptName;
+	}
 	
 	public Long getUserId() {
 		return userId;
